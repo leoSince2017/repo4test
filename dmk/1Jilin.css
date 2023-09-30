@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css?family=Changa%20One");
+@import url("https://fonts.googleapis.com/css?family=Imprima");
+
+
+@font-face {
+font-family: 'allfonts';
+src: url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/00font/%E6%80%9D%E6%BA%90%E9%BB%91%E4%BD%93.otf");
+}
+
+yt-live-chat-renderer *{
+    font-family: 'allfonts'; 
+}
+
+/* Transparent background */
+yt-live-chat-renderer {
+  background-color: transparent !important;
+}
+
+yt-live-chat-ticker-renderer {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+yt-live-chat-author-chip #author-name {
+  background-color: transparent !important;
+}
+
+yt-live-chat-item-list-renderer #item-scroller {
+  overflow: hidden !important;
+}
+
+yt-live-chat-interact-message-renderer #content,
+yt-live-chat-text-message-renderer #content,
+yt-live-chat-membership-item-renderer #content {
+  overflow: visible !important;
+}
+
+/* Hide header and input */
+yt-live-chat-header-renderer,
+yt-live-chat-message-input-renderer {
+  display: none !important;
+}
+
+/* Hide unimportant messages */
+yt-live-chat-interact-message-renderer[is-deleted],
+yt-live-chat-text-message-renderer[is-deleted],
+yt-live-chat-membership-item-renderer[is-deleted] {
+  display: none !important;
+}
+
+yt-live-chat-mode-change-message-renderer, 
+yt-live-chat-viewer-engagement-message-renderer, 
+yt-live-chat-restricted-participation-renderer {
+  display: none !important;
+}
+
+yt-live-chat-text-message-renderer a,
+yt-live-chat-membership-item-renderer a {
+  text-decoration: none !important;
+}
+
+/* 全局 Global */
+body {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0);
+}
+yt-live-chat-membership-item-renderer #author-name,yt-live-chat-paid-message-renderer #author-name,yt-live-chat-interact-message-renderer #author-name,yt-live-chat-text-message-renderer #author-name {
+  color: #987d65 !important;
+  font-family: "Source Han Serif CN Bold", "思源宋体 CN", "思源黑体 CN";
+  font-weight: Bold!important;
+  font-size: 42px !important;
+  line-height: 42px !important;
+  letter-spacing: 2px!important;
+}
+yt-live-chat-membership-item-renderer #header-subtext,yt-live-chat-paid-message-renderer #message,yt-live-chat-interact-message-renderer #message,
+yt-live-chat-interact-message-renderer #message *,yt-live-chat-text-message-renderer #message,
+yt-live-chat-text-message-renderer #message * {
+  color: #987d65 !important;
+  font-family: "Source Han Serif CN Bold", "思源宋体 CN", "思源黑体 CN";
+  font-weight: Bold!important;
+  font-size: 50px !important;
+  line-height: 55px !important;
+  letter-spacing: 2px!important;
+}
+yt-live-chat-text-message-renderer #image-and-message {
+  display: inline !important;
+  overflow: visible !important;
+}
+yt-live-chat-text-message-renderer #message {
+  display: inline !important;
+  overflow: visible !important;
+}
+/* B站官方小表情大小 */
+yt-live-chat-text-message-renderer #image-and-message .emoji {
+  height: 80px !important;
+}
+/* B站官方通用表情大小 */
+yt-live-chat-text-message-renderer #image-and-message .emoji[id^=official] {
+  height: 80px !important;
+}
+/* 主播房间表情大小 */
+yt-live-chat-text-message-renderer #image-and-message .emoji[id^=room] {
+  height: 80px !important;
+}
+/* 个人购买表情大小 */
+yt-live-chat-text-message-renderer #image-and-message .emoji[id^=upower] {
+  height: 80px !important;
+}
+#image-and-message img[display="block"] {
+  border-radius: 4px;
+}
+#image-and-message img[display="inline"] {
+  position: relative;
+  border-radius: 0px;
+}
+yt-img-shadow,yt-live-chat-ticker-renderer,#chat-badges,#chat-medal,#purchase-amount{
+  display: none !important;
+}
+yt-live-chat-paid-message-renderer,
+yt-live-chat-paid-message-renderer #card,
+yt-live-chat-paid-message-renderer #header,
+yt-live-chat-paid-message-renderer #content{
+border: 0px solid transparent!important;
+background-color: transparent!important;
+box-shadow: 0px 0px transparent!important;
+border-radius: 0px!important;
+margin: 0px 0px!Important;
+padding: 0px 0px!Important;
+}
+yt-live-chat-membership-item-renderer #card,yt-live-chat-membership-item-renderer #header{
+background-color: transparent!important;
+}
+yt-live-chat-membership-item-renderer,yt-live-chat-paid-message-renderer,yt-live-chat-interact-message-renderer,yt-live-chat-text-message-renderer{
+min-width:1487px!important;
+min-height: 225px!Important;
+padding: 40px 0px 65px 0px!Important;
+display: flex!important;
+justify-content: center!important;
+align-items: center!important;
+overflow: visible!Important;
+}
+yt-live-chat-membership-item-renderer #card,yt-live-chat-paid-message-renderer #card,yt-live-chat-interact-message-renderer #card,yt-live-chat-text-message-renderer #card{
+width:1487px!important;
+height: 225px!Important;
+padding: 0px 0px!Important;
+background-image: url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card.png");
+background-repeat: no-repeat;
+background-size: 1487px 225px;
+background-position: left top;
+position: relative;
+display: flex!important;
+justify-content: center!important;
+align-items: center!important;
+overflow: visible!Important;
+}
+yt-live-chat-membership-item-renderer #card::before,yt-live-chat-paid-message-renderer #card::before,yt-live-chat-interact-message-renderer #card::before,yt-live-chat-text-message-renderer #card::before{
+content: "";
+width: calc(100% + 20px);
+height: calc(100% + 80px);
+border: 0px solid transparent;
+background-image: url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-bf-lt.png"),url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-bf-rt.png"),url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-bf-lb.png"),url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-bf-rb.png");
+background-repeat: no-repeat;
+background-position: left 10px top,right 90px top,left bottom,right bottom 5px;
+background-size: 524px 43px,524px 43px,350px 50px,585px 163px;
+position: absolute; 
+top: -20px;
+left: 30px;
+}
+yt-live-chat-membership-item-renderer[privilegetype="3"] #card::before,yt-live-chat-interact-message-renderer[privilegetype="3"] #card::before,yt-live-chat-text-message-renderer[privilegetype="3"] #card::before{
+background-image: url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-bf-lt.png"),url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-bf-rt.png"),url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-3-bf-lb.png"),url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-bf-rb.png");
+background-size: 524px 43px,524px 43px,407px 50px,585px 163px;
+}
+yt-live-chat-membership-item-renderer[privilegetype="2"] #card::before,yt-live-chat-interact-message-renderer[privilegetype="2"] #card::before,yt-live-chat-text-message-renderer[privilegetype="2"] #card::before{
+background-image: url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-bf-lt.png"),url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-bf-rt.png"),url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-2-bf-lb.png"),url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-bf-rb.png");
+background-size: 524px 43px,524px 43px,464px 50px,585px 163px;
+}
+yt-live-chat-membership-item-renderer[privilegetype="1"] #card::before,yt-live-chat-interact-message-renderer[privilegetype="1"] #card::before,yt-live-chat-text-message-renderer[privilegetype="1"] #card::before{
+background-image: url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-bf-lt.png"),url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-bf-rt.png"),url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-1-bf-lb.png"),url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-bf-rb.png");
+background-size: 524px 43px,524px 43px,521px 50px,585px 163px;
+}
+yt-live-chat-membership-item-renderer #card::after,yt-live-chat-paid-message-renderer #card::after,yt-live-chat-interact-message-renderer #card::after,yt-live-chat-text-message-renderer #card::after{
+content: "";
+width: calc(100% + 20px);
+height: calc(100% + 80px);
+border: 0px solid transparent;
+background-image: url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-af-lt.png");
+background-repeat: no-repeat;
+background-position: left top;
+background-size: 137px 200px;
+position: absolute; 
+top: -20px;
+left: 0px;
+}
+yt-live-chat-membership-item-renderer[privilegetype="3"] #card::after,yt-live-chat-interact-message-renderer[privilegetype="3"] #card::after,yt-live-chat-text-message-renderer[privilegetype="3"] #card::after{
+background-image: url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-3-af-lt.png");
+}
+yt-live-chat-membership-item-renderer[privilegetype="2"] #card::after,yt-live-chat-interact-message-renderer[privilegetype="2"] #card::after,yt-live-chat-text-message-renderer[privilegetype="2"] #card::after{
+background-image: url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-2-af-lt.png");
+}
+yt-live-chat-membership-item-renderer[privilegetype="1"] #card::after,yt-live-chat-interact-message-renderer[privilegetype="1"] #card::after,yt-live-chat-text-message-renderer[privilegetype="1"] #card::after{
+background-image: url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-1-af-lt.png");
+}
+yt-live-chat-interact-message-renderer #content,yt-live-chat-text-message-renderer #content{
+width: calc(100% - 200px)!important;
+height: calc(100% - 20px)!important;
+padding: 0px 100px!important;
+display: flex!important;
+flex-direction: column!Important;
+justify-content: center!important;
+align-items: center!important;
+}
+yt-live-chat-interact-message-renderer yt-live-chat-author-chip,yt-live-chat-text-message-renderer yt-live-chat-author-chip{
+margin: 0px 0px!Important;
+position: absolute; 
+top: -30px;
+}
+yt-live-chat-membership-item-renderer #author-name,yt-live-chat-paid-message-renderer #author-name,yt-live-chat-interact-message-renderer #author-name,yt-live-chat-text-message-renderer #author-name{
+padding: 0px 30px 0px 35px!Important;
+border: 0px solid transparent;
+background-color: transparent!important;
+border-image-source: url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/an.png"); 
+border-image-slice: 9 55 9 55 fill; 
+border-width: 9px 55px 9px 55px;
+position: relative;
+display: flex!important;
+justify-content: center!important;
+align-items: center!important;
+z-index: 20;
+}
+yt-live-chat-membership-item-renderer #author-name::before,yt-live-chat-paid-message-renderer #author-name::before,yt-live-chat-interact-message-renderer #author-name::before,yt-live-chat-text-message-renderer #author-name::before{
+content: "";
+width: calc(100% + 15px);
+height: calc(100% + 80px);
+border: 0px solid transparent;
+background-image: url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/an-bf.png"),url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/an-bf.png");
+background-repeat: no-repeat;
+background-position: left top,right top;
+background-size: 33px 33px;
+position: absolute; 
+top: 5px;
+left: -5px;
+}
+yt-live-chat-interact-message-renderer #message,yt-live-chat-text-message-renderer #image-and-message{
+padding: 40px 0px 0px 0px;
+display: flex!important;
+justify-content: center!important;
+align-items: center!important;
+position: relative;
+top: -30px;
+}
+/*礼物*/
+yt-live-chat-paid-message-renderer #card::after{
+background-image: url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-paid-af-lt.png");
+}
+yt-live-chat-paid-message-renderer[giftname="superchat"] #card::after{
+background-image: url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/card-sc-af-lt.png");
+}
+yt-live-chat-paid-message-renderer #header{
+display: flex!important;
+justify-content: center!important;
+align-items: center!important;
+position: absolute; 
+top: -30px;
+}
+yt-live-chat-paid-message-renderer #content{
+width: calc(100% - 200px)!important;
+height: calc(100% - 60px)!important;
+padding: 0px 100px!important;
+display: flex!important;
+justify-content: center!important;
+align-items: center!important;
+position: relative;
+top: -30px;
+}
+yt-live-chat-paid-message-renderer #message{
+width: calc(100% - 0px)!important;
+height: calc(100% - 0px)!important;
+display: flex!important;
+justify-content: center!important;
+align-items: center!important;
+text-overflow: ellipsis!important;
+overflow: hidden!important;
+}
+/*上舰*/
+yt-live-chat-membership-item-renderer #header{
+width: calc(100% - 200px)!important;
+height: calc(100% - 20px)!important;
+padding: 0px 100px!important;
+display: flex!important;
+justify-content: center!important;
+align-items: center!important;
+position: relative;
+}
+yt-live-chat-membership-item-renderer #header::before{
+content: "";
+width: calc(100% + 0px);
+height: calc(100% + 0px);
+border: 0px solid transparent;
+background-image: url("https://2023blivechat.oss-cn-hangzhou.aliyuncs.com/fa-%E5%AF%82%E6%9E%97-%E5%BC%B9%E5%B9%95%E6%A0%B7%E5%BC%8F/picture/forest/ship.png");
+background-repeat: no-repeat;
+background-position: center;
+background-size: 378px 48px;
+position: absolute; 
+top: 0px;
+left: 0px;
+}
+yt-live-chat-membership-item-renderer #header-content-primary-column{
+width: calc(100% + 0px)!important;
+position: static!important;
+display: flex!important;
+flex-direction: column!Important;
+justify-content: center!important;
+align-items: center!important;
+}
+yt-live-chat-membership-item-renderer #header-content-inner-column{
+margin: 0px 0px!Important;
+position: absolute; 
+top: -40px;
+}
+yt-live-chat-membership-item-renderer #header-subtext{
+opacity:0;
+}
+@keyframes ruchang{
+ 0% {transform:rotateY(30deg);opacity: 0;}
+  100% {transform:none;opacity: 1;}
+}
+yt-live-chat-text-message-renderer #image-and-message,yt-live-chat-interact-message-renderer #message,yt-live-chat-paid-message-renderer #content,yt-live-chat-membership-item-renderer #header::before{
+animation: ruchang 800ms running!important;
+animation-fill-mode: forward;
+}
