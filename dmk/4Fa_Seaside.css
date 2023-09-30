@@ -1,0 +1,589 @@
+@import url("https://fonts.googleapis.com/css?family=Changa%20One");
+@import url("https://fonts.googleapis.com/css?family=Imprima");
+
+/* Transparent background */
+yt-live-chat-renderer {
+  background-color: transparent !important;
+}
+
+yt-live-chat-ticker-renderer {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+yt-live-chat-author-chip #author-name {
+  background-color: transparent !important;
+}
+
+yt-live-chat-item-list-renderer #item-scroller {
+  overflow: hidden !important;
+}
+
+yt-live-chat-interact-message-renderer #content,
+yt-live-chat-text-message-renderer #content,
+yt-live-chat-membership-item-renderer #content {
+  overflow: visible !important;
+}
+
+/* Hide header and input */
+yt-live-chat-header-renderer,
+yt-live-chat-message-input-renderer {
+  display: none !important;
+}
+
+/* Hide unimportant messages */
+yt-live-chat-interact-message-renderer[is-deleted],
+yt-live-chat-text-message-renderer[is-deleted],
+yt-live-chat-membership-item-renderer[is-deleted] {
+  display: none !important;
+}
+
+yt-live-chat-mode-change-message-renderer, 
+yt-live-chat-viewer-engagement-message-renderer, 
+yt-live-chat-restricted-participation-renderer {
+  display: none !important;
+}
+
+yt-live-chat-text-message-renderer a,
+yt-live-chat-membership-item-renderer a {
+  text-decoration: none !important;
+}
+
+/* 全局 Global */
+body {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* 一般消息表情 textMessageEmoticonStyle */
+/* B站官方小表情大小 */
+yt-live-chat-text-message-renderer #image-and-message .emoji {
+  height: 40px !important;
+z-index: 10!important;
+}
+
+/* B站官方通用表情大小 */
+yt-live-chat-text-message-renderer #image-and-message .emoji[id^=official] {
+  height: 60px !important;
+z-index: 10!important;
+}
+
+/* 主播房间表情大小 */
+yt-live-chat-text-message-renderer #image-and-message .emoji[id^=room] {
+  height: 60px !important;
+z-index: 10!important;
+}
+
+/* 个人购买表情大小 */
+yt-live-chat-text-message-renderer #image-and-message .emoji[id^=upower] {
+  height: 60px !important;
+z-index: 10!important;
+}
+#image-and-message img[display="block"] {
+  height: 60px !important;
+  border-radius: 4px;
+  display:inline-flex!Important;
+}
+#image-and-message img[display="inline"] {
+  position: relative;
+  top: 3px;
+  border-radius: 0px;
+  display:inline-flex!Important;
+}
+#image-and-message img{
+  display:inline-flex!Important;
+  z-index: 10!important;
+}
+
+yt-live-chat-membership-item-renderer #header-subtext,#chat-badges,#chat-medal,yt-img-shadow,yt-live-chat-ticker-renderer {
+  display: none !important;
+}
+
+/*游客*/
+yt-live-chat-interact-message-renderer,yt-live-chat-text-message-renderer{
+padding: 0px 0px!Important;
+}
+yt-live-chat-interact-message-renderer #card,yt-live-chat-text-message-renderer #card{
+margin: 0px 0px 15px 0px!Important;
+width:calc(100% - 0px)!Important;
+}
+yt-live-chat-interact-message-renderer #content,yt-live-chat-text-message-renderer #content{
+width:calc(100% - 0px)!Important;
+position: static!important;
+}
+yt-live-chat-interact-message-renderer yt-live-chat-author-chip,yt-live-chat-text-message-renderer yt-live-chat-author-chip{
+width:calc(100% - 0px)!Important;
+margin: 0px!Important;
+}
+yt-live-chat-interact-message-renderer #author-name,yt-live-chat-text-message-renderer #author-name{
+  font-family: "Source Han Sans CN Heavy"!important;
+  font-size: 22px !important;
+  line-height: 22px !important;
+  letter-spacing: 0.1px;
+  color: #81bcf4 !important;
+min-height: 22px!important;
+margin: 0px 0px 0px 145px!important;
+padding: 0px 0px 0px 0px!important;
+border: 0px solid transparent;
+background-color: transparent!important;
+border-image-source: url("https://img.picgo.net/2023/09/30/user-ylcac76dac16a4d0c1174.png"); 
+border-image-slice: 20 65 fill; 
+border-width: 10px 32px;
+display: flex!important;
+justify-content: center!important;
+align-items: center!important;
+position: relative;
+top: 15px;
+z-index: 50!important;
+}
+yt-live-chat-interact-message-renderer #message,yt-live-chat-text-message-renderer #image-and-message{
+width:calc(100% - 65px - 70px - 76px)!Important;
+min-height: 40px!important;
+margin: 0px 25px 0px 40px!important;
+padding: 5px 25px 5px 45px!important;
+border: 0px solid transparent;
+background-color: transparent!important;
+border-image-source: url("https://img.picgo.net/2023/09/30/user-carde0773faf0ec4a264.png"); 
+border-image-slice: 70 116 fill; 
+border-width: 23px 38px;
+display: flex!important;
+justify-content: center!important;
+align-items: center!important;
+position: relative;
+}
+yt-live-chat-interact-message-renderer #message::before,yt-live-chat-text-message-renderer #image-and-message::before{
+content: "";
+width: calc(100% + 130px);
+height: calc(100% + 112px);
+border: 0px solid transparent;
+background-image: url("https://img.picgo.net/2023/09/30/user-card-bf-lt361abf91c5916c5c.gif"),url("https://img.picgo.net/2023/09/30/user-card-bf-rb894163ab050ebf99.gif");
+background-repeat: no-repeat;
+background-position: left top,right bottom;
+background-size: 129px 156px,102px 102px;
+position: absolute; 
+top: -72px;
+left: -65px;
+display: flex!Important;
+z-index: 50!important;
+}
+yt-live-chat-interact-message-renderer #message,yt-live-chat-text-message-renderer #message{
+  font-family: "Source Han Sans CN Heavy"!important;
+  font-size: 35px !important;
+  line-height: 40px !important;
+  letter-spacing: 2px;
+  color: #7baad6 !important;
+  text-shadow: -2px -2px rgba(255,255,255,1), -2px 0px rgba(255,255,255,1), -2px 2px rgba(255,255,255,1), 0px -2px rgba(255,255,255,1), 0px 0px rgba(255,255,255,1), 0px 2px rgba(255,255,255,1), 2px -2px rgba(255,255,255,1), 2px 0px rgba(255,255,255,1), 2px 2px rgba(255,255,255,1);
+}
+/*舰长*/
+yt-live-chat-interact-message-renderer[privilegetype="3"] #card,yt-live-chat-text-message-renderer[privilegetype="3"] #card{
+margin: 0px 0px 15px 0px!Important;
+width:calc(100% - 0px)!Important;
+}
+yt-live-chat-interact-message-renderer[privilegetype="3"] yt-live-chat-author-chip,yt-live-chat-text-message-renderer[privilegetype="3"] yt-live-chat-author-chip{
+flex-direction: row-reverse!Important;
+}
+yt-live-chat-interact-message-renderer[privilegetype="3"] #author-name,yt-live-chat-text-message-renderer[privilegetype="3"] #author-name{
+margin: 0px 145px 0px 0px!important;
+border-image-source: url("https://img.picgo.net/2023/09/30/mem-3-ylcac3c22dfa2587fc315.png"); 
+top: 20px;
+}
+yt-live-chat-interact-message-renderer[privilegetype="3"] #message,yt-live-chat-text-message-renderer[privilegetype="3"] #image-and-message{
+width:calc(100% - 65px - 105px - 76px)!Important;
+margin: 0px 25px 0px 40px!important;
+padding: 5px 85px 5px 20px!important;
+border-image-source: url("https://img.picgo.net/2023/09/30/mem-3-card74fb14d1da9e218e.png"); 
+}
+yt-live-chat-interact-message-renderer[privilegetype="3"] #message::before,yt-live-chat-text-message-renderer[privilegetype="3"] #image-and-message::before{
+width: calc(100% + 115px);
+height: calc(100% + 100px);
+background-image: url("https://img.picgo.net/2023/09/30/mem-3-card-bf-lbb7204e1e4be824f3.gif"),url("https://img.picgo.net/2023/09/30/mem-3-card-bf-rtee0770e658de5346.gif");
+background-position: left bottom,right top;
+background-size: 82px 78px,157px 157px;
+top: -68px;
+left: -60px;
+z-index: 50!important;
+}
+yt-live-chat-interact-message-renderer[privilegetype="3"] #message::after,yt-live-chat-text-message-renderer[privilegetype="3"] #image-and-message::after{
+content: "";
+width: calc(100% + 70px);
+height: calc(100% + 40px);
+border: 0px solid transparent;
+border-radius: 25px;
+background-image: url("https://img.picgo.net/2023/09/30/mem-3-card-af-lt-1bb9c5bbd1f50a5c6.png");
+background-repeat: no-repeat;
+background-position: left -75px bottom -20px;
+background-size: 211px 140px;
+position: absolute; 
+top: -20px;
+left: -35px;
+display: flex!Important;
+z-index: -10!important;
+}
+yt-live-chat-text-message-renderer[privilegetype="3"] #image-and-message::after{
+z-index: 0!important;
+}
+yt-live-chat-interact-message-renderer[privilegetype="3"] #message,yt-live-chat-text-message-renderer[privilegetype="3"] #message{
+  color: #ffffff !important;
+  text-shadow: -2px -2px rgba(123,170,214,1), -2px 0px rgba(123,170,214,1), -2px 2px rgba(123,170,214,1), 0px -2px rgba(123,170,214,1), 0px 0px rgba(123,170,214,1), 0px 2px rgba(123,170,214,1), 2px -2px rgba(123,170,214,1), 2px 0px rgba(123,170,214,1), 2px 2px rgba(123,170,214,1);
+z-index: 10!important;
+}
+/*提督*/
+yt-live-chat-interact-message-renderer[privilegetype="2"] #card,yt-live-chat-text-message-renderer[privilegetype="2"] #card{
+margin: 0px 0px 15px 0px!Important;
+width:calc(100% - 0px)!Important;
+}
+yt-live-chat-interact-message-renderer[privilegetype="2"] #author-name,yt-live-chat-text-message-renderer[privilegetype="2"] #author-name{
+  color: #ff9396 !important;
+margin: 0px 0px 0px 145px!important;
+border-image-source: url("https://img.picgo.net/2023/09/30/mem-2-ylcac1cd47821cc6d688e.png"); 
+top: 23px;
+}
+yt-live-chat-interact-message-renderer[privilegetype="2"] #message,yt-live-chat-text-message-renderer[privilegetype="2"] #image-and-message{
+width:calc(100% - 65px - 105px - 76px)!Important;
+margin: 0px 10px 0px 55px!important;
+padding: 5px 45px 5px 40px!important;
+border-image-source: url("https://img.picgo.net/2023/09/30/mem-2-card9c5d2ba5291de02e.png"); 
+}
+yt-live-chat-interact-message-renderer[privilegetype="2"] #message::before,yt-live-chat-text-message-renderer[privilegetype="2"] #image-and-message::before{
+width: calc(100% + 132px);
+height: calc(100% + 95px);
+background-image: url("https://i.ibb.co/w7G082W/mem-2-card-bf-lt.gif"),url("https://img.picgo.net/2023/09/30/mem-2-card-bf-rb5e9d66e92a380030.gif");
+background-position: left top,right bottom;
+background-size: 133px 156px,118px 118px;
+top: -60px;
+left: -80px;
+z-index: 50!important;
+}
+yt-live-chat-interact-message-renderer[privilegetype="2"] #message::after,yt-live-chat-text-message-renderer[privilegetype="2"] #image-and-message::after{
+content: "";
+width: calc(100% + 70px);
+height: calc(100% + 36px);
+border: 0px solid transparent;
+border-radius: 25px;
+background-image: url("https://img.picgo.net/2023/09/30/mem-2-card-af-rt-239602566c8c43b2f.png");
+background-repeat: no-repeat;
+background-position: right -22px bottom -20px;
+background-size: 191px 132px;
+position: absolute; 
+top: -18px;
+left: -35px;
+display: flex!Important;
+z-index: -10!important;
+}
+yt-live-chat-text-message-renderer[privilegetype="2"] #image-and-message::after{
+z-index: 0!important;
+}
+yt-live-chat-interact-message-renderer[privilegetype="2"] #message,yt-live-chat-text-message-renderer[privilegetype="2"] #message{
+  color: #ffffff !important;
+  text-shadow: -2px -2px rgba(255,172,176,1), -2px 0px rgba(255,172,176,1), -2px 2px rgba(255,172,176,1), 0px -2px rgba(255,172,176,1), 0px 0px rgba(255,172,176,1), 0px 2px rgba(255,172,176,1), 2px -2px rgba(255,172,176,1), 2px 0px rgba(255,172,176,1), 2px 2px rgba(255,172,176,1);
+z-index: 10!important;
+}
+/*总督*/
+yt-live-chat-interact-message-renderer[privilegetype="1"] #card,yt-live-chat-text-message-renderer[privilegetype="1"] #card{
+margin: 0px 0px 50px 0px!Important;
+width:calc(100% - 0px)!Important;
+}
+yt-live-chat-interact-message-renderer[privilegetype="1"] yt-live-chat-author-chip,yt-live-chat-text-message-renderer[privilegetype="1"] yt-live-chat-author-chip{
+justify-content: center!important;
+}
+yt-live-chat-interact-message-renderer[privilegetype="1"] #author-name,yt-live-chat-text-message-renderer[privilegetype="1"] #author-name{
+  color: #6fc2eb !important;
+  text-shadow: -1px -1px rgba(255,255,255,1), -1px 0px rgba(255,255,255,1), -1px 1px rgba(255,255,255,1), 0px -1px rgba(255,255,255,1), 0px 0px rgba(255,255,255,1), 0px 1px rgba(255,255,255,1), 1px -1px rgba(255,255,255,1), 1px 0px rgba(255,255,255,1), 1px 1px rgba(255,255,255,1);
+margin: 0px 0px 8px 0px!important;
+border-image-source: url("https://img.picgo.net/2023/09/30/mem-1-ylcacb514ac6f365f84a6.png"); 
+border-image-slice: 20 75 fill; 
+border-width: 10px 37px;
+top: 0px;
+}
+yt-live-chat-interact-message-renderer[privilegetype="1"] #author-name::before,yt-live-chat-text-message-renderer[privilegetype="1"] #author-name::before{
+content: "";
+width: calc(100% + 170px);
+height: calc(100% + 80px);
+border: 0px solid transparent;
+background-image: url("https://img.picgo.net/2023/09/30/mem-1-ylcac-bf-lt75e103ddf37c4ff1.png"),url("https://img.picgo.net/2023/09/30/mem-1-ylcac-bf-rt123f120cbe13ec75.png");
+background-repeat: no-repeat;
+background-position: left top,right top;
+background-size: 46px 30px,46px 30px;
+position: absolute; 
+top: -5px;
+left: -85px;
+}
+yt-live-chat-interact-message-renderer[privilegetype="1"] #message,yt-live-chat-text-message-renderer[privilegetype="1"] #image-and-message{
+width:calc(100% - 65px - 145px - 36px)!Important;
+margin: 0px 25px 0px 40px!important;
+padding: 0px 35px 0px 110px!important;
+border-image-source: url("https://i.ibb.co/gydq7Jy/mem-1-card.png"); 
+border-image-slice: 40 40 fill; 
+border-width: 20px 20px;
+}
+yt-live-chat-interact-message-renderer[privilegetype="1"] #message::before,yt-live-chat-text-message-renderer[privilegetype="1"] #image-and-message::before{
+width: calc(100% + 80px);
+height: calc(100% + 130px);
+background-image: url("https://img.picgo.net/2023/09/30/mem-1-card-bf-lb1fa1914b3456f176.gif"),url("https://img.picgo.net/2023/09/30/mem-1-card-bf-rtad4ee300333b92f0.gif"),url("https://img.picgo.net/2023/09/30/mem-1-con-bf-rb-114bec6a355e79636.png");
+background-position: left bottom 5px,right 3px bottom 35px,right bottom;
+background-size: 274px 142px,137px 83px,155px 63px;
+top: unset;
+left: -50px;
+bottom: -69px;
+z-index: 50!important;
+}
+yt-live-chat-interact-message-renderer[privilegetype="1"] #message::after,yt-live-chat-text-message-renderer[privilegetype="1"] #image-and-message::after{
+content: "";
+width: calc(100% + 20px);
+height: calc(100% + 18px);
+border: 0px solid transparent;
+border-radius: 20px;
+background-image: url("https://i.ibb.co/cynLN2Q/mem-1-card-af-rt.png");
+background-repeat: no-repeat;
+background-position: right -2px bottom -102px;
+background-size: 249px 245px;
+position: absolute; 
+top: -9px;
+right: -10px;
+display: flex!Important;
+z-index: -10!important;
+}
+yt-live-chat-text-message-renderer[privilegetype="1"] #image-and-message::after{
+z-index: 0!important;
+}
+yt-live-chat-interact-message-renderer[privilegetype="1"] #message,yt-live-chat-text-message-renderer[privilegetype="1"] #message{
+  color: #6fc2eb !important;
+z-index: 10!important;
+}
+/*付费*/
+yt-live-chat-paid-message-renderer,
+yt-live-chat-paid-message-renderer #card,
+yt-live-chat-paid-message-renderer #header,
+yt-live-chat-paid-message-renderer #content{
+border: 0px solid transparent!important;
+background-color: transparent!important;
+box-shadow: 0px 0px transparent!important;
+border-radius: 0px!important;
+margin: 0px 0px!Important;
+padding: 0px 0px!Important;
+}
+yt-live-chat-paid-message-renderer #card{
+margin: 45px 0px 10px 0px!Important;
+flex-direction: column-reverse!important;
+}
+yt-live-chat-paid-message-renderer #header-content-primary-column{
+margin: 0px 0px 0px 50px;
+flex-direction: row-reverse!important;
+justify-content: flex-end!Important;
+}
+yt-live-chat-paid-message-renderer #author-name{
+  font-family: "Source Han Sans CN Heavy"!important;
+  font-size: 21px !important;
+  line-height: 21px !important;
+  letter-spacing: 2px;
+  color: #6fc2eb !important;
+  text-shadow: -1px -1px rgba(255,255,255,1), -1px 0px rgba(255,255,255,1), -1px 1px rgba(255,255,255,1), 0px -1px rgba(255,255,255,1), 0px 0px rgba(255,255,255,1), 0px 1px rgba(255,255,255,1), 1px -1px rgba(255,255,255,1), 1px 0px rgba(255,255,255,1), 1px 1px rgba(255,255,255,1);
+min-height: 21px!important;
+margin: 0px 0px 0px 55px!important;
+padding: 0px 15px 0px 15px!important;
+border: 0px solid transparent;
+background-color: transparent!important;
+border-image-source: url("https://img.picgo.net/2023/09/30/paid-an9b05ac2a65c41c8f.png"); 
+border-image-slice: 18 45 fill; 
+border-width: 6px 15px;
+display: flex!important;
+justify-content: center!important;
+align-items: center!important;
+position: relative;
+}
+yt-live-chat-paid-message-renderer #author-name::before{
+content: "";
+width: calc(100% + 110px);
+height: calc(100% + 80px);
+border: 0px solid transparent;
+background-image: url("https://img.picgo.net/2023/09/30/paid-an-bf-l70f91ec6b58b7ecf.gif");
+background-repeat: no-repeat;
+background-position: left top;
+background-size: 39px 39px;
+position: absolute; 
+top: -9px;
+left: -60px;
+}
+yt-live-chat-paid-message-renderer #purchase-amount{
+  font-family: "Source Han Sans CN Heavy"!important;
+  font-size: 26px !important;
+  line-height: 26px !important;
+  letter-spacing: 2px;
+  color: #ffffff !important;
+  text-shadow: -2px -2px rgba(255,167,167,1), -2px 0px rgba(255,167,167,1), -2px 2px rgba(255,167,167,1), 0px -2px rgba(255,167,167,1), 0px 0px rgba(255,167,167,1), 0px 2px rgba(255,167,167,1), 2px -2px rgba(255,167,167,1), 2px 0px rgba(255,167,167,1), 2px 2px rgba(255,167,167,1);
+position: relative;
+top: 4px;
+}
+yt-live-chat-paid-message-renderer #content{
+min-height: 40px!important;
+margin: 0px 40px 10px 40px!important;
+padding: 15px 55px 0px 55px!important;
+border-image-source: url("https://img.picgo.net/2023/09/30/paid-card-147328ab43032330f.png")!Important; 
+border-image-slice: 40 40 fill!Important; 
+border-width: 20px 20px!important;
+display: flex!important;
+justify-content: center!important;
+align-items: center!important;
+position: relative;
+}
+yt-live-chat-paid-message-renderer #content::before{
+content: "";
+width: calc(100% + 38px);
+height: calc(100% + 88px);
+border: 0px solid transparent;
+background-image: url("https://img.picgo.net/2023/09/30/paid-card-bf-lt4e91eb2d1ad87bc7.png"),url("https://img.picgo.net/2023/09/30/paid-card-bf-rt25f24a6a8f04f97d.png"),url("https://img.picgo.net/2023/09/30/paid-card-bf-tcea3e8cbd959ed9ca.gif");
+background-repeat: no-repeat;
+background-position: left top 41px,right top 41px,center top;
+background-size: 123px 46px,123px 46px,98px 89px;
+position: absolute; 
+top: -64px;
+left: -19px;
+display: flex!Important;
+z-index: 50!important;
+}
+yt-live-chat-paid-message-renderer #content::after{
+content: "";
+width: calc(100% + 29px);
+height: calc(100% + 80px);
+border: 0px solid transparent;
+border-radius: 17px;
+background-image: url("https://img.picgo.net/2023/09/30/paid-card-af-1967cdcee8f0189e4.png");
+background-repeat: repeat-x;
+background-position: left top;
+background-size: 510px 35px;
+position: absolute; 
+top: -14px;
+left: -14px;
+display:flex!Important;
+}
+yt-live-chat-paid-message-renderer #message{
+  font-family: "Source Han Sans CN Heavy"!important;
+  font-size: 35px !important;
+  line-height: 40px !important;
+  letter-spacing: 2.5px;
+  color: #6fc2eb !important;
+  text-shadow: -2px -2px rgba(255,255,255,1), -2px 0px rgba(255,255,255,1), -2px 2px rgba(255,255,255,1), 0px -2px rgba(255,255,255,1), 0px 0px rgba(255,255,255,1), 0px 2px rgba(255,255,255,1), 2px -2px rgba(255,255,255,1), 2px 0px rgba(255,255,255,1), 2px 2px rgba(255,255,255,1);
+position: relative;
+top: 10px;
+}
+/*免费*/
+yt-live-chat-paid-message-renderer[price-level="0"] #purchase-amount{
+display: none!important;
+}
+yt-live-chat-paid-message-renderer[price-level="0"] #content{
+display: block!Important;
+visibility: visible!important;
+}
+/*sc*/
+yt-live-chat-paid-message-renderer[giftname="superchat"] #content{
+border-image-source: url("https://img.picgo.net/2023/09/30/paid-sc-card-103b49f72e67c599d.png")!Important; 
+}
+yt-live-chat-paid-message-renderer[giftname="superchat"] #content::before{
+background-image: url("https://img.picgo.net/2023/09/30/paid-card-bf-lt4e91eb2d1ad87bc7.png"),url("https://img.picgo.net/2023/09/30/paid-card-bf-rt25f24a6a8f04f97d.png"),url("https://img.picgo.net/2023/09/30/paid-card-bf-tcea3e8cbd959ed9ca.gif"),url("https://img.picgo.net/2023/09/30/paid-sc-card-bf-lb8c86e00c613f9ddd.png");
+background-position: left top 41px,right top 41px,center top,left bottom;
+background-size: 123px 46px,123px 46px,98px 89px,75px 49px;
+}
+yt-live-chat-paid-message-renderer[giftname="superchat"] #content::after{
+background-image: url("https://img.picgo.net/2023/09/30/paid-sc-card-af-13484517b2a5061e8.png");
+}
+yt-live-chat-paid-message-renderer[giftname="superchat"] #message{
+  color: #ffa7a7 !important;
+}
+/*上舰*/
+yt-live-chat-membership-item-renderer #card,yt-live-chat-membership-item-renderer #header{
+background-color: transparent!important;
+}
+yt-live-chat-membership-item-renderer{
+padding: 0px 0px 35px 0px!important;
+}
+yt-live-chat-membership-item-renderer #card{
+padding: 145px 0px 0px 0px!Important;
+display: flex!important;
+justify-content: center!important;
+align-items: center!important;
+background-image: url("https://i.ibb.co/wdF0wG0/ship-bf.gif");
+background-repeat: no-repeat;
+background-position: center bottom;
+background-size: 479px 216px;
+overflow: visible !important;
+z-index: 50!important;
+}
+yt-live-chat-membership-item-renderer #header-content-primary-column,yt-live-chat-membership-item-renderer yt-live-chat-author-chip{
+width: calc(100% - 0px)!Important;
+}
+yt-live-chat-membership-item-renderer yt-live-chat-author-chip{
+justify-content: center!important;
+}
+yt-live-chat-membership-item-renderer #author-name{
+  font-family: "Source Han Sans CN Heavy"!important;
+  font-size: 27px !important;
+  line-height: 27px !important;
+  letter-spacing: 1px;
+  color: #5271ac !important;
+min-height: 27px!important;
+margin: 0px 0px 0px 170px!important;
+padding: 0px 0px 0px 0px!important;
+border: 0px solid transparent;
+background-color: transparent!important;
+border-image-source: url("https://img.picgo.net/2023/09/30/ship-an2fd584ca60c0928c.png"); 
+border-image-slice: 20 45 fill; 
+border-width: 10px 22px;
+display: flex!important;
+justify-content: center!important;
+align-items: center!important;
+position: relative;
+top: 30px;
+z-index: -10!important;
+}
+@keyframes ruchang{
+0%{
+opacity:0;
+transform:translateY(24px);
+}
+33%{
+opacity:1;
+transform:translateY(0px);
+}
+66%{
+opacity:1;
+transform:translateY(24px);
+}
+100%{
+opacity:1;
+transform:none;
+}
+}
+yt-live-chat-text-message-renderer,yt-live-chat-interact-message-renderer,yt-live-chat-paid-message-renderer,yt-live-chat-membership-item-renderer{
+animation:ruchang 800ms;
+animation-fill-mode:forward;
+animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+@keyframes ruchang1{
+0%{
+opacity:0;
+transform:translateY(-38px);
+}
+100%{
+opacity:1;
+transform:none;
+}
+}
+yt-live-chat-interact-message-renderer #message::before,yt-live-chat-text-message-renderer #image-and-message::before,yt-live-chat-paid-message-renderer #content::before,yt-live-chat-membership-item-renderer #author-name{
+animation:ruchang1 800ms;
+animation-fill-mode:forward;
+}
+@keyframes zd{
+0%{
+background-position: left 0px top,right top
+}
+50%{
+background-position: left 20px top,right 20px top
+}
+100%{
+background-position: left top,right top
+}
+}
+yt-live-chat-interact-message-renderer[privilegetype="1"] #author-name::before,yt-live-chat-text-message-renderer[privilegetype="1"] #author-name::before{
+animation:zd 1800ms infinite;
+animation-fill-mode:forward;
+}
